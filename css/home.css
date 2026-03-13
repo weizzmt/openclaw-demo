@@ -530,6 +530,54 @@ body {
   transform: translateY(-2px);
 }
 
+.qr-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.qr-card {
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(0, 248, 255, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 25px 0;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.qr-title {
+  color: #00f8ff;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.qr-code {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 10px 0;
+}
+
+.qr-desc {
+  color: #d1c4e9;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.contact-fallback {
+  margin-top: 30px;
+  color: #bb86fc;
+  font-size: 1rem;
+}
+
+.contact-fallback strong {
+  color: #00f8ff;
+}
+
+
 /* =============== 响应式设计 =============== */
 @media (max-width: 768px) {
   .pain-points-grid,
