@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif;
+  background: linear-gradient(135deg, #1a0033, #3a007f);
+  color: #e6e6ff;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  padding: 12px 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.navbar a {
+  color: #bb86fc;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  background: #bb86fc;
+  color: white;
+}
+
+.navbar a.active {
+  background: #4a6cf7;
+  color: white;
+}
+
+.order-page {
+  max-width: 900px;
+  margin: 60px auto 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.step-item {
+  background: rgba(58, 0, 127, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid rgba(100, 50, 200, 0.3);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.step-item:hover {
+  transform: translateY(-5px);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: #bb86fc;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.step-item h3 {
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.step-item p {
+  font-size: 1rem;
+  color: #d1c4e9;
+}
+
+/* 二维码区域 */
+.qr-section {
+  margin: 50px 0;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(187, 134, 252, 0.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.instruction {
+  font-size: 1rem;
+  color: #bb86fc;
+  margin-bottom: 20px;
+}
+
+.qr-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.qr-code {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  border: 1px dashed rgba(187, 134, 252, 0.5);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.placeholder-text {
+  font-size: 0.9rem;
+  color: #b3b3ff;
+  margin-top: 10px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background: #bb86fc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #b269f7;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #bb86fc;
+  border: 1px solid #bb86fc;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(187, 134, 252, 0.1);
+  transform: translateY(-2px);
+}
+
+.description {
+  margin: 40px 0;
+  font-size: 1.1rem;
+  color: #bb86fc;
+  line-height: 1.8;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #bb86fc;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 10px rgba(187, 134, 252, 0.4);
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  background: #b269f7;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .steps,
+  .qr-section {
+    padding: 15px;
+  }
+
+  .qr-code {
+    width: 150px;
+    height: 150px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

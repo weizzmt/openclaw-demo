@@ -1,0 +1,143 @@
+/* 基础重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif;
+  background: linear-gradient(135deg, #1a0033, #3a007f);
+  color: #e6e6ff;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.guarantee-page {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 主标题 */
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 40px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* 盾牌图标（纯 CSS 绘制）*/
+.shield-icon {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #ff4d6d, #4d6dff);
+  border-radius: 50% 50% 50% 50% / 50% 50% 40% 40%;
+  position: relative;
+  margin: 40px auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  overflow: hidden;
+  transform: rotate(-10deg);
+}
+
+.shield-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.shield-icon::after {
+  content: "Customer\nService\nGuarantee";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+/* 服务卡片网格 */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 50px 0;
+}
+
+/* 卡片样式 */
+.service-card {
+  background: rgba(58, 0, 127, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid rgba(100, 50, 200, 0.3);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* 卡片标题 */
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #bb86fc;
+  margin-bottom: 12px;
+}
+
+/* 卡片描述 */
+.card-desc {
+  font-size: 1rem;
+  color: #d1c4e9;
+  line-height: 1.5;
+}
+
+/* 返回顶部按钮 */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #bb86fc;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 10px rgba(187, 134, 252, 0.4);
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  background: #b269f7;
+  transform: translateY(-2px);
+}
+
+/* 响应式 */
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+}
