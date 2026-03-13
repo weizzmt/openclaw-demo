@@ -4,29 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>OpenClaw 专业部署</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- 公共导航样式 -->
+    <link rel="stylesheet" href="css/common.css" />
+    <!-- 本页专属样式 -->
+    <link rel="stylesheet" href="css/home.css" />
 </head>
 <body>
+
+<!-- 响应式导航栏 -->
+<nav class="navbar">
+  <div class="nav-brand">OpenClaw</div>
+  <button class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">首页</a></li>
+    <li><a href="#content">痛点</a></li>
+    <li><a href="#service">服务</a></li>
+    <li><a href="#guarantee">服务承诺</a></li>
+    <li><a href="#price">价格</a></li>
+    <li><a href="#order">下单流程</a></li>
+  </ul>
+</nav>
 
 <div class="container">
 
     <!-- =============== 首页 =============== -->
     <section id="home" class="section">
         <h1 class="main-title">open claw</h1>
-        <p class="subtitle">1V1专业部署，让“龙虾”真有用</p>
+        <p class="subtitle">1V1专业部署，让"龙虾"真有用</p>
 
         <div class="features">
             <div class="feature-item">
                 <span class="feature-key">无忧</span>——1V1安装服务，零障碍安装；
             </div>
             <div class="feature-item">
-                <span class="feature-key">安全</span>——1V1安全指导，让“龙虾”不捣乱；
+                <span class="feature-key">安全</span>——1V1安全指导，让"龙虾"不捣乱；
             </div>
             <div class="feature-item">
-                <span class="feature-key">助养</span>——1V1技能训练，让“龙虾”真工作；
+                <span class="feature-key">助养</span>——1V1技能训练，让"龙虾"真工作；
             </div>
             <div class="feature-item">
-                <span class="feature-key">省钱</span>——1V1费用规划，让“龙虾”不乱花钱。
+                <span class="feature-key">省钱</span>——1V1费用规划，让"龙虾"不乱花钱。
             </div>
         </div>
 
@@ -36,29 +57,62 @@
     <!-- =============== 痛点 =============== -->
     <section id="content" class="section">
         <h2 class="section-title">你是否也遇到这些问题？</h2>
-        <div class="pain-points">
-            <div class="point-item">❌ 安装过程复杂，文档看不懂</div>
-            <div class="point-item">❌ 配置环境耗时，动辄几小时</div>
-            <div class="point-item">❌ 运行报错频繁，无人解答</div>
-            <div class="point-item">❌ 功能不会用，白白浪费资源</div>
+        <div class="pain-points-grid">
+            <div class="pain-point-card">
+                <h3 class="card-title">❌ 不会写代码？</h3>
+                <p class="card-desc">想做自动化却无从下手，技术门槛太高让人望而却步</p>
+            </div>
+            <div class="pain-point-card">
+                <h3 class="card-title">❌ 担心隐私泄露？</h3>
+                <p class="card-desc">云端 AI 让你担心个人和客户数据安全，不敢上传敏感信息</p>
+            </div>
+            <div class="pain-point-card">
+                <h3 class="card-title">❌ 浪费大量时间？</h3>
+                <p class="card-desc">每天重复整理文件、写周报、盯订单，效率低下身心疲惫</p>
+            </div>
+            <div class="pain-point-card">
+                <h3 class="card-title">❌ 遇到问题没人管？</h3>
+                <p class="card-desc">软件装不好、不会用，找不到专业支持和技术指导</p>
+            </div>
+            <div class="pain-point-card">
+                <h3 class="card-title">❌ 安装过程复杂？</h3>
+                <p class="card-desc">文档看不懂，配置环境耗时，动辄几小时还报错</p>
+            </div>
+            <div class="pain-point-card">
+                <h3 class="card-title">❌ 功能不会用？</h3>
+                <p class="card-desc">运行报错频繁，功能闲置不用，白白浪费资源</p>
+            </div>
         </div>
     </section>
 
     <!-- =============== 服务内容 =============== -->
     <section id="service" class="section">
         <h2 class="section-title">我们的服务内容</h2>
-        <div class="service-items">
+        <div class="services-list">
             <div class="service-item">
-                <h3>远程安装</h3>
-                <p>专业工程师 1V1 远程协助，全程操作，你只需观看</p>
+                <span class="step">01</span>
+                <h3>零技术门槛</h3>
+                <p>聊天发指令即可使用，我们帮您部署配置，开箱即用</p>
             </div>
             <div class="service-item">
-                <h3>配置优化</h3>
-                <p>根据你的设备和需求，定制最优配置方案</p>
+                <span class="step">02</span>
+                <h3>本地运行安全</h3>
+                <p>数据全程存储在您的电脑上，不上传云端，隐私绝对安全</p>
             </div>
             <div class="service-item">
-                <h3>使用教学</h3>
-                <p>手把手教学核心功能，确保你会用、敢用、常用</p>
+                <span class="step">03</span>
+                <h3>AI 自动化</h3>
+                <p>根据您的需求定制功能，真正实现您的AI私人助理</p>
+            </div>
+            <div class="service-item">
+                <span class="step">04</span>
+                <h3>有记忆不失忆</h3>
+                <p>成熟记忆解决方案，让您的AI能记住不忘事</p>
+            </div>
+            <div class="service-item">
+                <span class="step">05</span>
+                <h3>专业服务</h3>
+                <p>包安装、包配置、包服务，终身免费远程指导和技术支持</p>
             </div>
         </div>
     </section>
@@ -66,6 +120,25 @@
     <!-- =============== 服务承诺 =============== -->
     <section id="guarantee" class="section">
         <h2 class="section-title">服务承诺</h2>
+        <div class="shield-icon"></div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3 class="card-title">专业部署</h3>
+                <p class="card-desc">资深技术团队 1 对 1 安装配置，24 小时内完成部署上线</p>
+            </div>
+            <div class="service-card">
+                <h3 class="card-title">新手教学</h3>
+                <p class="card-desc">30 分钟手把手教学，从零到一教会你所有操作和技巧</p>
+            </div>
+            <div class="service-card">
+                <h3 class="card-title">终身售后</h3>
+                <p class="card-desc">免费版本升级、技能扩展、问题排查，永久贴心服务</p>
+            </div>
+            <div class="service-card">
+                <h3 class="card-title">无隐形消费</h3>
+                <p class="card-desc">一次付费永久使用，无后续任何收费项目，价格透明公开</p>
+            </div>
+        </div>
         <ul class="guarantee-list">
             <li>✅ 安装失败全额退款</li>
             <li>✅ 7×12 小时技术支持</li>
@@ -76,7 +149,9 @@
 
     <!-- =============== 价格 =============== -->
     <section id="price" class="section">
-        <h2 class="section-title">套餐价格</h2>
+        <!-- 一次性付费 -->
+        <h2 class="section-title">一次付费终身使用</h2>
+        <p class="subtitle">新手必选 | VIP用户专属 | 无隐形消费</p>
         <div class="packages">
             <div class="package-card">
                 <h3 class="card-title">基础安装</h3>
@@ -85,17 +160,73 @@
                 <p class="card-desc">只能在电脑使用</p>
             </div>
             <div class="package-card">
-                <h3 class="card-title">进阶部署</h3>
-                <p class="card-desc"><strong>适用人群：</strong>开发者 / 技术爱好者</p>
-                <p class="card-desc"><strong>核心服务：</strong>多设备支持 + 自动更新 + 高级配置</p>
-                <p class="card-desc">支持手机 + 电脑联动</p>
+                <h3 class="card-title">手机控制</h3>
+                <p class="card-desc"><strong>适用人群：</strong>个人用户 / 新手小白</p>
+                <p class="card-desc"><strong>核心服务：</strong>远程安装 + 飞书/钉钉等多个通讯渠道</p>
+                <p class="card-desc"><span class="highlight">🔥 90% 用户选择</span></p>
             </div>
             <div class="package-card">
-                <h3 class="card-title">企业定制</h3>
-                <p class="card-desc"><strong>适用人群：</strong>团队 / 公司</p>
-                <p class="card-desc"><strong>核心服务：</strong>私有化部署 + API 对接 + 专属培训</p>
-                <p class="card-desc">支持大规模并发与管理</p>
+                <h3 class="card-title">服务器安装</h3>
+                <p class="card-desc"><strong>适用人群：</strong>企业 / 特殊需求用户</p>
+                <p class="card-desc"><strong>核心服务：</strong>按需定制 + 专属功能开发 + 优先服务</p>
+                <p class="card-desc">高端定制，一对一沟通需求</p>
             </div>
+        </div>
+
+        <!-- 按月付费 -->
+        <h2 class="section-title">按月付费</h2>
+        <p class="subtitle">灵活选择 | 按需升级 | 随时取消</p>
+        <div class="monthly-packages">
+            <div class="package-card">
+                <h3 class="package-name">基础套餐</h3>
+                <div class="price-tag">
+                    <span class="original-price">99 ¥/月</span>
+                    <span class="discount-price">限时优惠 <strong>39 ¥/月</strong></span>
+                </div>
+                <p class="description">适合刚接触 AI，想先试水的新手</p>
+                <p class="usage">对话额度：约等于每天 10-15 次日常对话</p>
+                <ul class="features">
+                    <li><i class="checkmark">✓</i> 专属技术经理部署调试</li>
+                    <li><i class="checkmark">✓</i> 记忆优化配置</li>
+                    <li><i class="checkmark">✓</i> 1-2个专属功能定制开发</li>
+                    <li><i class="checkmark">✓</i> 7×24 VIP 1V1服务支持</li>
+                    <li><i class="checkmark">✓</i> 20元大模型 token 包</li>
+                </ul>
+            </div>
+            <div class="package-card">
+                <h3 class="package-name">进阶套餐</h3>
+                <div class="price-tag">
+                    <span class="original-price">299 ¥/月</span>
+                    <span class="discount-price">限时优惠 <strong>129 ¥/月</strong></span>
+                </div>
+                <p class="description">适合已经上手，把 AI 当日常工具用的进阶用户</p>
+                <p class="usage">对话额度：约等于每天 30-50 次中等强度对话</p>
+                <ul class="features">
+                    <li><i class="checkmark">✓</i> 体验版全部服务</li>
+                    <li><i class="checkmark">✓</i> 进阶安全支持</li>
+                    <li><i class="checkmark">✓</i> 59元大模型 token 包（性价比最优）</li>
+                </ul>
+            </div>
+            <div class="package-card">
+                <h3 class="package-name">Max套餐</h3>
+                <div class="price-tag">
+                    <span class="original-price">699 ¥/月</span>
+                    <span class="discount-price">限时优惠 <strong>299 ¥/月</strong></span>
+                </div>
+                <p class="description">适合重度使用，拿 AI 干活、做内容、跑流程的专业用户</p>
+                <p class="usage">对话额度：约等于每天 60-100 次高强度对话</p>
+                <ul class="features">
+                    <li><i class="checkmark">✓</i> 体验版全部服务</li>
+                    <li><i class="checkmark">✓</i> 进阶安全支持</li>
+                    <li><i class="checkmark">✓</i> 进阶知识库方案</li>
+                    <li><i class="checkmark">✓</i> 99元大模型 token 包（大额度无顾虑）</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 限时福利 -->
+        <div class="promotion">
+            <i>🎁</i> <strong>限时福利：</strong>前 200 名下单，赠送 Mac 专属技能包！限量送完即止！
         </div>
     </section>
 
@@ -121,10 +252,20 @@
         </div>
 
         <div class="qr-section">
-            <p class="instruction">扫码添加客户经理</p>
+            <h2 class="section-title">扫码下单</h2>
+            <p class="instruction">长按下方二维码图片，扫描添加专属客户经理</p>
             <div class="qr-placeholder">
-                <img src="https://via.placeholder.com/200x200/0a0a0a/00f8ff?text=此处二维码" alt="二维码" />
+                <img src="https://via.placeholder.com/200x200/1a0033/ffffff?text=此处二维码" alt="二维码" class="qr-code" />
+                <p class="placeholder-text">此处二维码将用于添加专属客户经理</p>
             </div>
+            <div class="action-buttons">
+                <button class="btn-primary">立即扫码</button>
+                <button class="btn-secondary">联系客服</button>
+            </div>
+        </div>
+
+        <div class="description">
+            <p>简单省心，专业团队全程协助，让你轻松开启智能办公新体验</p>
         </div>
     </section>
 
@@ -133,6 +274,38 @@
 </div>
 
 <script>
+    // 汉堡菜单控制
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+
+            const spans = hamburger.querySelectorAll('span');
+            if (navLinks.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+            } else {
+                spans[0].style.transform = 'rotate(0) translate(0, 0)';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'rotate(0) translate(0, 0)';
+            }
+        });
+
+        // 点击链接后自动收起菜单
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const spans = hamburger.querySelectorAll('span');
+                spans[0].style.transform = 'rotate(0) translate(0, 0)';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'rotate(0) translate(0, 0)';
+            });
+        });
+    }
+
     // 返回顶部
     const backToTopBtn = document.getElementById('backToTop');
     if (backToTopBtn) {
