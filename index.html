@@ -31,7 +31,7 @@
 
 <div class="container">
   <h1 class="main-title">open claw</h1>
-  <p class="subtitle">1V1专业部署、让“龙虾”真有用</p>
+  <p class="subtitle">1V1专业部署，让“龙虾”真有用</p>
 
   <div class="features">
     <div class="feature-item">
@@ -56,7 +56,6 @@
   <button id="backToTop" class="back-to-top">顶部</button>
 </div>
 
-<!-- 导航交互脚本 -->
 <script>
   // 汉堡菜单控制
   const hamburger = document.getElementById('hamburger');
@@ -66,7 +65,6 @@
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('active');
 
-      // 汉堡图标动画
       const spans = hamburger.querySelectorAll('span');
       if (navLinks.classList.contains('active')) {
         spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
@@ -79,11 +77,9 @@
       }
     });
 
-    // 点击链接后自动收起菜单（提升手机体验）
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
-        // 重置图标
         const spans = hamburger.querySelectorAll('span');
         spans[0].style.transform = 'rotate(0) translate(0, 0)';
         spans[1].style.opacity = '1';
@@ -92,17 +88,17 @@
     });
   }
 
-  // 返回顶部功能
-  document.getElementById('backToTop').addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  // 返回顶部
+  const backToTopBtn = document.getElementById('backToTop');
+  if (backToTopBtn) {
+    backToTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
-  window.addEventListener('scroll', () => {
-    const btn = document.getElementById('backToTop');
-    if (btn) {
-      btn.style.display = window.scrollY > 300 ? 'block' : 'none';
-    }
-  });
+    window.addEventListener('scroll', function () {
+      backToTopBtn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
+    });
+  }
 </script>
 </body>
 </html>
