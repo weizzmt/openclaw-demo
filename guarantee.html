@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>你的专属服务 · 全程无忧</title>
+  <!-- 公共导航样式 -->
+  <link rel="stylesheet" href="css/common.css" />
+  <!-- 本页专属样式 -->
+  <link rel="stylesheet" href="css/guarantee.css" />
+</head>
+<body>
+
+<!-- 响应式导航栏：左对齐设计 -->
+<nav class="navbar navbar-left">
+  <div class="nav-brand">OpenClaw</div>
+  <button class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">首页</a></li>
+    <li><a href="content.html">内容</a></li>
+    <li><a href="service.html">服务</a></li>
+    <li><a href="guarantee.html">服务承诺</a></li>
+    <li><a href="price.html">价格</a></li>
+    <li><a href="order.html">下单流程</a></li>
+  </ul>
+</nav>
+
+<div class="guarantee-page">
+  <!-- 标题 -->
+  <h1 class="main-title">你的专属服务 · 全程无忧</h1>
+
+  <!-- 盾牌图标 -->
+  <div class="shield-icon"></div>
+
+  <!-- 服务卡片网格 -->
+  <div class="services-grid">
+    <div class="service-card">
+      <h3 class="card-title">专业部署</h3>
+      <p class="card-desc">资深技术团队 1 对 1 安装配置，24 小时内完成部署上线</p>
+    </div>
+
+    <div class="service-card">
+      <h3 class="card-title">新手教学</h3>
+      <p class="card-desc">30 分钟手把手教学，从零到一教会你所有操作和技巧</p>
+    </div>
+
+    <div class="service-card">
+      <h3 class="card-title">终身售后</h3>
+      <p class="card-desc">免费版本升级、技能扩展、问题排查，永久贴心服务</p>
+    </div>
+
+    <div class="service-card">
+      <h3 class="card-title">无隐形消费</h3>
+      <p class="card-desc">一次付费永久使用，无后续任何收费项目，价格透明公开</p>
+    </div>
+  </div>
+
+  <!-- 返回顶部按钮 -->
+  <button id="backToTop" class="back-to-top">顶部</button>
+</div>
+
+<!-- 导航 & 返回顶部脚本 -->
+<script>
+  // 汉堡菜单控制
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+
+      const spans = hamburger.querySelectorAll('span');
+      if (navLinks.classList.contains('active')) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+      } else {
+        spans[0].style.transform = 'rotate(0) translate(0, 0)';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'rotate(0) translate(0, 0)';
+      }
+    });
+
+    // 点击链接后自动收起菜单
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const spans = hamburger.querySelectorAll('span');
+        spans[0].style.transform = 'rotate(0) translate(0, 0)';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'rotate(0) translate(0, 0)';
+      });
+    });
+  }
+
+  // 返回顶部
+  const backToTopBtn = document.getElementById('backToTop');
+  if (backToTopBtn) {
+    backToTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    window.addEventListener('scroll', function () {
+      backToTopBtn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
+    });
+  }
+</script>
+
+</body>
+</html>
