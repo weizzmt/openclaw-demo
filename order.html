@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>下单流程</title>
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/order.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-brand">OpenClaw</div>
+  <button class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">首页</a></li>
+    <li><a href="content.html">内容</a></li>
+    <li><a href="service.html">服务</a></li>
+    <li><a href="guarantee.html">服务承诺</a></li>
+    <li><a href="price.html">价格</a></li>
+    <li><a href="order.html">下单流程</a></li>
+  </ul>
+</nav>
+
+<div class="order-page">
+  <h1 class="main-title">下单流程 · 3 步搞定</h1>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-number">01</div>
+      <h3>咨询客服</h3>
+      <p>确认设备与需求</p>
+    </div>
+
+    <div class="step-item">
+      <div class="step-number">02</div>
+      <h3>拍下付款</h3>
+      <p>选择套餐并完成支付</p>
+    </div>
+
+    <div class="step-item">
+      <div class="step-number">03</div>
+      <h3>部署使用</h3>
+      <p>安装配置并提供教学</p>
+    </div>
+  </div>
+
+  <!-- 二维码交互区 -->
+  <div class="qr-section">
+    <h2 class="section-title">扫码下单</h2>
+    <p class="instruction">长按下方二维码图片，扫描添加专属客户经理</p>
+    <div class="qr-placeholder">
+      <img src="https://via.placeholder.com/200x200/1a0033/ffffff?text=此处二维码" alt="二维码" class="qr-code" />
+      <p class="placeholder-text">此处二维码将用于添加专属客户经理</p>
+    </div>
+    <div class="action-buttons">
+      <button class="btn-primary">立即扫码</button>
+      <button class="btn-secondary">联系客服</button>
+    </div>
+  </div>
+
+  <div class="description">
+    <p>简单省心，专业团队全程协助，让你轻松开启智能办公新体验</p>
+  </div>
+
+  <button id="backToTop" class="back-to-top">顶部</button>
+</div>
+
+<script>
+  // 汉堡菜单控制（同前）
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+
+      const spans = hamburger.querySelectorAll('span');
+      if (navLinks.classList.contains('active')) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+      } else {
+        spans[0].style.transform = 'rotate(0) translate(0, 0)';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'rotate(0) translate(0, 0)';
+      }
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const spans = hamburger.querySelectorAll('span');
+        spans[0].style.transform = 'rotate(0) translate(0, 0)';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'rotate(0) translate(0, 0)';
+      });
+    });
+  }
+
+  // 返回顶部
+  const backToTopBtn = document.getElementById('backToTop');
+  if (backToTopBtn) {
+    backToTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    window.addEventListener('scroll', function () {
+      backToTopBtn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
+    });
+  }
+</script>
+
+</body>
+</html>

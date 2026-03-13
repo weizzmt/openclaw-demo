@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>你是不是也这样？</title>
+  <!-- 公共导航样式 -->
+  <link rel="stylesheet" href="css/common.css" />
+  <!-- 本页专属样式 -->
+  <link rel="stylesheet" href="css/content.css" />
+</head>
+<body>
+
+<!-- 响应式导航栏（完全照搬 service.html 结构） -->
+<nav class="navbar">
+  <div class="nav-brand">OpenClaw</div>
+  <button class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">首页</a></li>
+    <li><a href="content.html">内容</a></li>
+    <li><a href="service.html">服务</a></li>
+    <li><a href="guarantee.html">服务承诺</a></li>
+    <li><a href="price.html">价格</a></li>
+    <li><a href="order.html">下单流程</a></li>
+  </ul>
+</nav>
+
+<div class="content-page">
+  <!-- 页标题 -->
+  <h1 class="page-title">你是不是也这样？</h1>
+
+  <!-- 痛点卡片网格 -->
+  <div class="pain-points-grid">
+    <a href="service.html" class="pain-point-card">
+      <h3 class="card-title">不会写代码？</h3>
+      <p class="card-desc">想做自动化却无从下手，技术门槛太高让人望而却步</p>
+    </a>
+
+    <a href="service.html" class="pain-point-card">
+      <h3 class="card-title">担心隐私泄露？</h3>
+      <p class="card-desc">云端 AI 让你担心个人和客户数据安全，不敢上传敏感信息</p>
+    </a>
+
+    <a href="service.html" class="pain-point-card">
+      <h3 class="card-title">浪费大量时间？</h3>
+      <p class="card-desc">每天重复整理文件、写周报、盯订单，效率低下身心疲惫</p>
+    </a>
+
+    <a href="service.html" class="pain-point-card">
+      <h3 class="card-title">遇到问题没人管？</h3>
+      <p class="card-desc">软件装不好、不会用，找不到专业支持和技术指导</p>
+    </a>
+  </div>
+
+  <!-- 返回首页按钮 -->
+  <div class="back-home">
+    <a href="index.html" class="back-button">← 返回首页</a>
+  </div>
+
+  <!-- 返回顶部按钮 -->
+  <button id="backToTop" class="back-to-top">顶部</button>
+</div>
+
+<!-- 导航 & 返回顶部脚本（完全复用 service.html 的逻辑） -->
+<script>
+  // 汉堡菜单控制
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+
+      const spans = hamburger.querySelectorAll('span');
+      if (navLinks.classList.contains('active')) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+      } else {
+        spans[0].style.transform = 'rotate(0) translate(0, 0)';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'rotate(0) translate(0, 0)';
+      }
+    });
+
+    // 点击链接后自动收起菜单
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const spans = hamburger.querySelectorAll('span');
+        spans[0].style.transform = 'rotate(0) translate(0, 0)';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'rotate(0) translate(0, 0)';
+      });
+    });
+  }
+
+  // 返回顶部
+  const backToTopBtn = document.getElementById('backToTop');
+  if (backToTopBtn) {
+    backToTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    window.addEventListener('scroll', function () {
+      backToTopBtn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
+    });
+  }
+</script>
+
+</body>
+</html>
