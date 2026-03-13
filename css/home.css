@@ -6,27 +6,30 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Microsoft YaHei", sans-serif;
-  background: linear-gradient(135deg, #f9f7fe 0%, #eef2ff 100%);
-  color: #2d2b55;
+  font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif;
+  background: linear-gradient(135deg, #1a0033, #3a007f);
+  color: #e6e6ff;
   line-height: 1.6;
-  padding: 40px 20px;
   min-height: 100vh;
+  padding: 0;
 }
+
+/* 导航栏已在 common.css 中定义，此处无需重复 */
 
 .container {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 80px auto 0;
+  padding: 0 20px;
   text-align: center;
 }
 
-/* 主标题 */
+/* 主标题：保留小写风格，但使用柔和高亮色 */
 .main-title {
   font-size: 3.2rem;
   font-weight: 800;
   letter-spacing: -1px;
   margin-bottom: 16px;
-  background: linear-gradient(90deg, #4a6cf7, #8a2be2);
+  background: linear-gradient(90deg, #bb86fc, #d0bcff);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -36,53 +39,77 @@ body {
 /* 副标题 */
 .subtitle {
   font-size: 1.3rem;
-  color: #5a5a8a;
+  color: #bb86fc;
   margin-bottom: 40px;
   font-weight: 500;
 }
 
-/* 卖点列表 */
+/* 卖点区域：卡片化设计，匹配 price.html 风格 */
 .features {
-  text-align: left;
-  background: white;
-  padding: 30px;
+  background: rgba(58, 0, 127, 0.8);
+  backdrop-filter: blur(10px);
   border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(74, 108, 247, 0.15);
+  padding: 30px;
+  border: 1px solid rgba(100, 50, 200, 0.3);
   margin-bottom: 40px;
+  text-align: left;
 }
 
 .feature-item {
   font-size: 1.15rem;
-  margin: 22px 0;
-  color: #333;
+  margin: 20px 0;
+  color: #d1c4e9;
 }
 
 .feature-key {
   font-weight: 700;
-  color: #4a6cf7;
+  color: #bb86fc;
   font-size: 1.25rem;
 }
 
-/* 返回顶部按钮 */
+/* CTA 按钮 */
+.cta-section {
+  margin-top: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 32px;
+  background: linear-gradient(90deg, #bb86fc, #a070f0);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(187, 134, 252, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(187, 134, 252, 0.5);
+}
+
+/* 返回顶部按钮（复用其他页面样式） */
 .back-to-top {
   position: fixed;
   bottom: 30px;
   right: 30px;
   width: 50px;
   height: 50px;
-  background: #4a6cf7;
+  background: #bb86fc;
   color: white;
   border: none;
   border-radius: 50%;
   font-weight: bold;
   cursor: pointer;
   display: none;
-  box-shadow: 0 4px 10px rgba(74, 108, 247, 0.4);
+  box-shadow: 0 4px 10px rgba(187, 134, 252, 0.4);
   transition: all 0.3s ease;
 }
 
 .back-to-top:hover {
-  background: #3a5ce5;
+  background: #b269f7;
   transform: translateY(-2px);
 }
 
@@ -104,27 +131,8 @@ body {
     font-size: 1rem;
   }
 
-  /* CTA 按钮区域 */
-  .cta-section {
-    margin-top: 40px;
-  }
-
   .cta-button {
-    display: inline-block;
-    padding: 12px 32px;
-    background: linear-gradient(90deg, #4a6cf7, #8a2be2);
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(74, 108, 247, 0.3);
+    padding: 10px 24px;
+    font-size: 1rem;
   }
-
-  .cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(74, 108, 247, 0.5);
-  }
-
 }
