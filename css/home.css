@@ -1,0 +1,129 @@
+/* 重置与基础 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(135deg, #f9f7fe 0%, #eef2ff 100%);
+  color: #2d2b55;
+  line-height: 1.6;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 主标题 */
+.main-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, #4a6cf7, #8a2be2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-transform: lowercase;
+}
+
+/* 副标题 */
+.subtitle {
+  font-size: 1.3rem;
+  color: #5a5a8a;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+/* 卖点列表 */
+.features {
+  text-align: left;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(74, 108, 247, 0.15);
+  margin-bottom: 40px;
+}
+
+.feature-item {
+  font-size: 1.15rem;
+  margin: 22px 0;
+  color: #333;
+}
+
+.feature-key {
+  font-weight: 700;
+  color: #4a6cf7;
+  font-size: 1.25rem;
+}
+
+/* 返回顶部按钮 */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #4a6cf7;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 10px rgba(74, 108, 247, 0.4);
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  background: #3a5ce5;
+  transform: translateY(-2px);
+}
+
+/* 响应式 */
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 2.4rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .features {
+    padding: 20px;
+  }
+
+  .feature-item {
+    font-size: 1rem;
+  }
+
+  /* CTA 按钮区域 */
+  .cta-section {
+    margin-top: 40px;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 12px 32px;
+    background: linear-gradient(90deg, #4a6cf7, #8a2be2);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 108, 247, 0.3);
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 108, 247, 0.5);
+  }
+}

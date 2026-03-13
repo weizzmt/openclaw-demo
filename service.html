@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenClaw 服务内容</title>
+  <link rel="stylesheet" href="css/service.css" />
+</head>
+<body>
+
+<div class="service-page">
+  <div class="header">
+    <h1 class="logo">OpenClaw</h1>
+    <p class="slogan">为你解决所有难题</p>
+  </div>
+
+  <!-- 图片区域（用占位图） -->
+  <div class="image-container">
+    <img src="https://via.placeholder.com/600x400/1a0033/ffffff?text=AI+Tech+Support" alt="AI 技术支持" class="demo-image" />
+  </div>
+
+  <!-- 服务列表 -->
+  <div class="services-list">
+    <div class="service-item">
+      <span class="step">01</span>
+      <h3>零技术门槛</h3>
+      <p>聊天发指令即可使用，我们帮您部署配置，开箱即用</p>
+    </div>
+    <div class="service-item">
+      <span class="step">02</span>
+      <h3>本地运行安全</h3>
+      <p>数据全程存储在您的电脑上，不上传云端，隐私绝对安全</p>
+    </div>
+    <div class="service-item">
+      <span class="step">03</span>
+      <h3>AI 自动化</h3>
+      <p>根据您的需求定制功能，真正实现您的AI私人助理</p>
+    </div>
+    <div class="service-item">
+      <span class="step">04</span>
+      <h3>有记忆不失忆</h3>
+      <p>成熟记忆解决方案，让您的AI能记住不忘事</p>
+    </div>
+    <div class="service-item">
+      <span class="step">05</span>
+      <h3>专业服务</h3>
+      <p>包安装、包配置、包服务，终身免费远程指导和技术支持</p>
+    </div>
+  </div>
+
+  <!-- 返回顶部按钮 -->
+  <button id="backToTop" class="back-to-top">顶部</button>
+</div>
+
+<script>
+  document.getElementById('backToTop').onclick = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  window.addEventListener('scroll', function () {
+    const btn = document.getElementById('backToTop');
+    btn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
+  });
+</script>
+
+</body>
+</html>

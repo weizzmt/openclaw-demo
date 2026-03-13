@@ -1,0 +1,120 @@
+/* 重置与基础 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif;
+  background: linear-gradient(135deg, #1a0033, #3a007f);
+  color: #e6e6ff;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.content-page {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 页标题 */
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* 痛点卡片网格 */
+.pain-points-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 40px 0;
+}
+
+/* 卡片样式 */
+.pain-point-card {
+  background: rgba(58, 0, 127, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid rgba(100, 50, 200, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.pain-point-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* 卡片标题 */
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #bb86fc;
+  margin-bottom: 12px;
+}
+
+/* 卡片描述 */
+.card-desc {
+  font-size: 1rem;
+  color: #d1c4e9;
+  line-height: 1.5;
+}
+
+/* 返回顶部按钮 */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #bb86fc;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 10px rgba(187, 134, 252, 0.4);
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  background: #b269f7;
+  transform: translateY(-2px);
+}
+
+.back-home {
+  margin-top: 40px;
+}
+
+.back-button {
+  display: inline-block;
+  color: #bb86fc;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+
+.back-button:hover {
+  opacity: 0.8;
+}
+
+/* 响应式 */
+@media (max-width: 600px) {
+  .pain-points-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+}
