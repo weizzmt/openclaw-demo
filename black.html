@@ -1,289 +1,320 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>OpenClaw | AI 助理部署</title>
-    <link rel="stylesheet" href="css/black.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>世企通 - OPEN CLAW</title>
+    <link rel="stylesheet" href="./css/black.css" />
+
+    <!-- 本地字体降级 -->
+    <style>
+        @font-face {
+            font-family: 'Noto Serif SC';
+            font-weight: 900;
+            src: local('Noto Serif SC Black'),
+            local('Source Han Serif SC Heavy'),
+            local('STSong'),
+            local('SimSun');
+        }
+        @font-face {
+            font-family: 'Noto Serif SC';
+            font-weight: 700;
+            src: local('Noto Serif SC Bold'),
+            local('Source Han Serif SC Medium'),
+            local('STSong'),
+            local('SimSun');
+        }
+        @font-face {
+            font-family: 'Noto Serif SC';
+            font-weight: 400;
+            src: local('Noto Serif SC Regular'),
+            local('Source Han Serif SC Normal'),
+            local('STSong'),
+            local('SimSun');
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
+<!-- 4.1 Hero 首屏 -->
+<section class="hero" style="background-color: #0A0A0A; min-height: 100vh;">
+    <!-- iOS 100vh 修复 -->
+    <div class="ios-fix"></div>
 
-    <!-- =============== 首页 (Hero) =============== -->
-    <section id="home" class="section hero">
-        <div class="logo-container">
-            <img src="https://via.placeholder.com/100x100/330000/ff6b00?text=🦞" alt="OpenClaw Logo" class="logo" />
+    <!-- 装饰光圈 -->
+    <div class="decoration-circle red" style="position: absolute; top: 12px; right: -10px; width: 280px; height: 280px; border-radius: 50%; background: rgba(232,68,42,0.12); z-index: 0;"></div>
+    <div class="decoration-circle green" style="position: absolute; bottom: 12px; left: -10px; width: 220px; height: 220px; border-radius: 50%; background: rgba(46,204,113,0.15); z-index: 0;"></div>
+
+    <!-- 龙虾插图 -->
+    <div class="lobster-icon" style="position: absolute; top: 12px; right: -10px; width: 190px; opacity: 0.75; filter: drop-shadow(0 0 20px rgba(0,0,0,0.5)); z-index: 0;">
+        🦞
+    </div>
+
+    <!-- Logo -->
+    <div class="logo-container">
+        <div class="logo-text">世企通</div>
+        <div class="logo-title">OPEN CLAW</div>
+    </div>
+
+    <!-- 主标题 -->
+    <h1 style="font-size: 36px; font-weight: 900; color: #E8442A; letter-spacing: 0.22em; margin-bottom: 20px;">1V1专业部署<br />让"龙虾"真有用</h1>
+
+    <!-- 副标题 -->
+    <p style="font-size: 18px; font-weight: 400; color: rgba(255,255,255,0.55); margin-bottom: 40px;">你的专属 AI 助理，从安装到赚钱</p>
+
+    <!-- 特性卡片 -->
+    <div class="benefits" style="display: flex; flex-direction: column; gap: 12px; background: rgba(255,255,255,0.05); padding: 12px; border-radius: 12px; margin-top: 20px;">
+        <div class="benefit-item" style="display: flex; align-items: center; gap: 8px; padding: 12px; border-radius: 12px; background: var(--card); border-left: 4px solid #E8442A;">
+            <span class="tag" style="background: #E8442A; color: white; padding: 2px 10px; border-radius: 20px; font-size: 13px; line-height: 1.4; font-weight: 600;">无忧</span>
+            <p style="font-size: 13px; color: #F0F0F0; margin: 0; line-height: 1.4;">1V1安装服务，零障碍安装</p>
         </div>
-        <h1 class="main-title">OPEN CLAW</h1>
-        <p class="subtitle">1V1专业部署<br>让“龙虾”真有用</p>
-        <p class="tagline">你的专属 AI 助理，从安装到赚钱</p>
-
-        <!-- 首页特征标签 -->
-        <div class="features">
-            <div class="feature-item">
-                <span class="label label-wuyou">无忧</span> 1V1安装服务，导购式安装
-            </div>
-            <div class="feature-item">
-                <span class="label label-anquan">安全</span> 1V1安全指导，让“龙虾”不乱花
-            </div>
-            <div class="feature-item">
-                <span class="label label-zhuYang">助养</span> 1V1技能训练，让“龙虾”真正工作
-            </div>
-            <div class="feature-item">
-                <span class="label label-shengqian">省钱</span> 1V1费用规划，让“龙虾”不乱花钱
-            </div>
+        <div class="benefit-item" style="display: flex; align-items: center; gap: 8px; padding: 12px; border-radius: 12px; background: var(--card); border-left: 4px solid #2ECC71;">
+            <span class="tag" style="background: #2ECC71; color: #0A0A0A; padding: 2px 10px; border-radius: 20px; font-size: 13px; line-height: 1.4; font-weight: 600;">安全</span>
+            <p style="font-size: 13px; color: #F0F0F0; margin: 0; line-height: 1.4;">1V1安全指导，让"龙虾"不捣乱</p>
         </div>
-
-        <a href="#content" class="cta-button">看看你的问题</a>
-    </section>
-
-    <!-- =============== 痛点 =============== -->
-    <section id="content" class="section">
-        <h2 class="section-title">这些问题<br>你中了几个？</h2>
-        <p class="sub-title">90%的人在这几步卡住了——</p>
-
-        <div class="pain-points">
-            <div class="pain-item">
-                <div class="pain-number">1</div>
-                <h3>不会装？没人教？</h3>
-                <p>自己折腾半天装不好，出了问题找不着人，自己浪费时间</p>
-            </div>
-            <div class="pain-item">
-                <div class="pain-number">2</div>
-                <h3>装好了，然后呢？</h3>
-                <p>动辄一天半，也搞一个能真正稳定用，不敢从零下手</p>
-            </div>
-            <div class="pain-item">
-                <div class="pain-number">3</div>
-                <h3>AI每次都失忆？</h3>
-                <p>说了十遍的偏好记不住，每次都从头来，累不胜其烦了</p>
-            </div>
-            <div class="pain-item">
-                <div class="pain-number">4</div>
-                <h3>用得起，用不久？</h3>
-                <p>大模型流量计费，聊几天钱就烧完了，不敢放开用</p>
-            </div>
+        <div class="benefit-item" style="display: flex; align-items: center; gap: 8px; padding: 12px; border-radius: 12px; background: var(--card); border-left: 4px solid #F0C040;">
+            <span class="tag" style="background: #F0C040; color: #0A0A0A; padding: 2px 10px; border-radius: 20px; font-size: 13px; line-height: 1.4; font-weight: 600;">助养</span>
+            <p style="font-size: 13px; color: #F0F0F0; margin: 0; line-height: 1.4;">1V1技能训练，让"龙虾"真工作</p>
         </div>
-    </section>
+        <div class="benefit-item" style="display: flex; align-items: center; gap: 8px; padding: 12px; border-radius: 12px; background: var(--card); border-left: 4px solid rgba(255,255,255,0.2);">
+            <span class="tag" style="background: rgba(255,255,255,0.2); color: white; padding: 2px 10px; border-radius: 20px;  font-size: 13px; line-height: 1.4; font-weight: 600;">省钱</span>
+            <p style="font-size: 13px; color: #F0F0F0; margin: 0; line-height: 1.4;">1V1费用规划，让"龙虾"更省钱</p>
+        </div>
+    </div>
+</section>
 
-    <!-- =============== 服务 =============== -->
-    <section id="service" class="section">
-        <h2 class="section-title">为您提供<br>完整的AI助理解决方案</h2>
-        <p class="sub-title">我们就在您使用AI时遇到的每一个障碍——</p>
+<!-- 4.2 痛点区 -->
+<section class="pain-points" style="background-color: #141414; padding: 44px 24px;">
+    <h2 style="font-size: 1.8rem; color: #E8442A; margin-bottom: 15px;">你是不是也这样？<br />这些问题<br />你中了几个？</h2>
+    <p style="opacity: 0.8; margin-bottom: 30px;">90%的人在这几步卡住了——</p>
+    <div class="q-item" style="background: #161616; padding: 20px; border-radius: 16px; margin-bottom: 20px; position: relative; padding-left: 60px;">
+        <div class="q-num" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; background: #E8442A; color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.2rem; font-weight: bold;">1</div>
+        <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #F0F0F0;">不会装？没人教？</h3>
+        <p style="opacity: 0.8; color: #F0F0F0;">自己折腾半天装不好，出了问题找不到人，白白浪费时间</p>
+    </div>
+    <div class="q-item" style="background: #161616; padding: 20px; border-radius: 16px; margin-bottom: 20px; position: relative; padding-left: 60px;">
+        <div class="q-num" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; background: #E8442A; color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.2rem; font-weight: bold;">2</div>
+        <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #F0F0F0;">装好了，然后呢？</h3>
+        <p style="opacity: 0.8; color: #F0F0F0;">功能一大串，但没一个是真正需要的，不知从哪下手</p>
+    </div>
+    <div class="q-item" style="background: #161616; padding: 20px; border-radius: 16px; margin-bottom: 20px; position: relative; padding-left: 60px;">
+        <div class="q-num" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; background: #E8442A; color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.2rem; font-weight: bold;">3</div>
+        <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #F0F0F0;">AI每次都忘？</h3>
+        <p style="opacity: 0.8; color: #F0F0F0;">说了十遍的偏好记不住，每次都从头来，累了就放弃</p>
+    </div>
+    <div class="q-item" style="background: #161616; padding: 20px; border-radius: 16px; margin-bottom: 20px; position: relative; padding-left: 60px;">
+        <div class="q-num" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; background: #E8442A; color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.2rem; font-weight: bold;">4</div>
+        <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #F0F0F0;">用得起，用不久？</h3>
+        <p style="opacity: 0.8; color: #F0F0F0;">大模型按量计费，聊几天钱就烧完了，不敢放开用</p>
+    </div>
+</section>
 
-        <div class="solution-list">
-            <div class="solution-item">
-                <div class="item-number">1</div>
-                <h3>零技术门槛</h3>
-                <p>每天都能用，不用懂代码，我们帮您部署配置，开箱即用</p>
-            </div>
-            <div class="solution-item">
-                <div class="item-number">2</div>
-                <h3>本地运行·数据安全</h3>
-                <p>数据全部存储在您的电脑上，不上云端，隐私更安全</p>
-            </div>
-            <div class="solution-item">
-                <div class="item-number">3</div>
-                <h3>AI自动化定制</h3>
-                <p>根据您的需求定制功能，真正实现您的AI私人助理</p>
-            </div>
-            <div class="solution-item">
-                <div class="item-number">4</div>
-                <h3>有记忆，不失忆</h3>
-                <p>成熟记忆解决方案，让您的AI记住，不丢事</p>
-            </div>
-            <div class="solution-item">
-                <div class="item-number">5</div>
-                <h3>专业全包服务</h3>
-                <p>包安装、包运维、包维护，终身免费远程指导和技术支持</p>
+<!-- 4.3 服务内容区 -->
+<section class="service-content" style="background-color: #1E1E1E; padding: 56px 24px;">
+    <h2 style="font-size: 1.8rem; color: #E8442A; margin-bottom: 15px;">OPEN CLAW VIP 服务</h2>
+    <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: #F0F0F0;">为您提供<br />完整的AI助理解决方案</h3>
+    <p style="opacity: 0.8; margin-bottom: 30px;">我们解决你在使用 AI 中遇到的每一道障碍——</p>
+    <div class="solution-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        <div class="sol-item" style="background: #161616; padding: 20px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: row; gap: 14px;">
+            <div class="num" style="width: 28px; height: 28px; border-radius: 6px; border: 1px solid rgba(232,68,42,0.35); color: rgba(232,68,42,0.7); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;">1</div>
+            <div>
+                <h4 style="font-size: 15px; font-weight: 700; color: #F0F0F0; margin-bottom: 3px;">零技术门槛</h4>
+                <p style="font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5;">聊天发指令即可使用，我们帮您部署配置，开箱即用</p>
             </div>
         </div>
-    </section>
-
-    <!-- =============== 服务承诺 =============== -->
-    <section id="guarantee" class="section">
-        <h2 class="section-title">专业·专注·专属</h2>
-        <p class="sub-title">四项硬承诺，让你用得放心</p>
-
-        <div class="promise-grid">
-            <div class="promise-item">
-                <div class="icon">⚡</div>
-                <h3>专业部署</h3>
-                <p>按需部署，VIP专线配置，24小时完成部署上线</p>
-            </div>
-            <div class="promise-item">
-                <div class="icon">⚙️</div>
-                <h3>专业服务</h3>
-                <p>免费定制1~2个功能场景，真正实现私人定制和优化</p>
-            </div>
-            <div class="promise-item">
-                <div class="icon">🔧</div>
-                <h3>专业售后</h3>
-                <p>免费技术升级、技能扩展、问题排查，安心省心</p>
-            </div>
-            <div class="promise-item">
-                <div class="icon">📦</div>
-                <h3>专属服务包</h3>
-                <p>分档定价合理，性能有保障，成本更低效率更高</p>
+        <div class="sol-item" style="background: #161616; padding: 20px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: row; gap: 14px;">
+            <div class="num" style="width: 28px; height: 28px; border-radius: 6px; border: 1px solid rgba(232,68,42,0.35); color: rgba(232,68,42,0.7); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;">2</div>
+            <div>
+                <h4 style="font-size: 15px; font-weight: 700; color: #F0F0F0; margin-bottom: 3px;">本地运行·数据安全</h4>
+                <p style="font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5;">数据全程存储在您的电脑上，不上传云端，隐私更安全</p>
             </div>
         </div>
-    </section>
-
-    <!-- =============== 价格 =============== -->
-    <section id="price" class="section">
-        <h2 class="section-title">月付套餐</h2>
-        <p class="sub-title">新手必选 · VIP用户专享 · 无隐形消费</p>
-
-        <div class="pricing-cards">
-            <!-- 基础套餐 -->
-            <div class="pricing-card">
-                <div class="card-header">
-                    <h3>基础套餐</h3>
-                    <p>适合：刚接触AI，想先试试水的新手</p>
-                </div>
-                <div class="price-box">
-                    <span class="price">¥39</span>
-                    <span class="unit">/月</span>
-                    <span class="original">原价¥99</span>
-                </div>
-                <button class="btn-primary">立即订阅</button>
-                <div class="benefits">
-                    <p><strong>对话额度：</strong>约每天 10-15 次高效对话</p>
-                    <ul>
-                        <li>✅ 专属技术答疑和调试</li>
-                        <li>✅ 记忆优化配置</li>
-                        <li>✅ 1-2个专属功能定制开发</li>
-                        <li>✅ 7×24 VIP紧急支持</li>
-                        <li>✅ 20元大模型 token 包</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 进阶套餐 -->
-            <div class="pricing-card popular">
-                <div class="card-header">
-                    <h3>进阶套餐</h3>
-                    <p>适合：已使用AI半年以上，想要深度使用的用户</p>
-                </div>
-                <div class="price-box">
-                    <span class="price">¥129</span>
-                    <span class="unit">/月</span>
-                    <span class="original">原价¥299</span>
-                </div>
-                <button class="btn-primary">立即订阅</button>
-                <div class="benefits">
-                    <p><strong>对话额度：</strong>约每天 30-50 次高效对话</p>
-                    <ul>
-                        <li>✅ 保持核心系统服务</li>
-                        <li>✅ 进阶安全支持</li>
-                        <li>✅ 详解知识库方案</li>
-                        <li>✅ 59元大模型 token 包（性价比最优）</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Max 套餐 -->
-            <div class="pricing-card">
-                <div class="card-header">
-                    <h3>Max 套餐</h3>
-                    <p>适合：团队/公司、多产品、需要持续使用AI的用户</p>
-                </div>
-                <div class="price-box">
-                    <span class="price">¥299</span>
-                    <span class="unit">/月</span>
-                    <span class="original">原价¥999</span>
-                </div>
-                <button class="btn-primary">立即订阅</button>
-                <div class="benefits">
-                    <p><strong>对话额度：</strong>约每天 60-100 次高效对话</p>
-                    <ul>
-                        <li>✅ 保持核心系统服务</li>
-                        <li>✅ 进阶安全支持</li>
-                        <li>✅ 详解知识库方案</li>
-                        <li>✅ 99元大模型 token 包（大老板先用起）</li>
-                    </ul>
-                </div>
+        <div class="sol-item" style="background: #161616; padding: 20px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: row; gap: 14px;">
+            <div class="num" style="width: 28px; height: 28px; border-radius: 6px; border: 1px solid rgba(232,68,42,0.35); color: rgba(232,68,42,0.7); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;">3</div>
+            <div>
+                <h4 style="font-size: 15px; font-weight: 700; color: #F0F0F0; margin-bottom: 3px;">AI自动化定制</h4>
+                <p style="font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5;">根据您的需求定制功能，真正实现您的AI私人助理</p>
             </div>
         </div>
-    </section>
-
-    <!-- =============== 下单流程 =============== -->
-    <section id="order" class="section">
-        <h2 class="section-title">三步开始<br>你的AI助理</h2>
-        <p class="sub-title">简单、快速、有人全程陪跑</p>
-
-        <div class="steps">
-            <div class="step-item">
-                <div class="step-number">01</div>
-                <h3>扫码下单</h3>
-                <p>扫码后客服会优先处理你，整个过程不超过30分钟</p>
-            </div>
-            <div class="step-item">
-                <div class="step-number">02</div>
-                <h3>添加专属客户经理</h3>
-                <p>交付完成后由资深客户经理一对一对接，开始享受1V1专属服务</p>
-            </div>
-            <div class="step-item">
-                <div class="step-number">03</div>
-                <h3>即刻使用</h3>
-                <p>专职客户经理提供1V1部署配置服务，24小时内上线可用</p>
+        <div class="sol-item" style="background: #161616; padding: 20px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: row; gap: 14px;">
+            <div class="num" style="width: 28px; height: 28px; border-radius: 6px; border: 1px solid rgba(232,68,42,0.35); color: rgba(232,68,42,0.7); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;">4</div>
+            <div>
+                <h4 style="font-size: 15px; font-weight: 700; color: #F0F0F0; margin-bottom: 3px;">有记忆，不失忆</h4>
+                <p style="font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5;">成熟记忆解决方案，让您的AI能记住、不忘事</p>
             </div>
         </div>
-
-        <div class="action-section">
-            <h3>扫码下单<br>今天就把您的AI员工领回家</h3>
-            <p>付款后24小时内完成部署，专属客户经理全程跟进</p>
-
-            <div class="qr-actions">
-                <div class="qr-option">
-                    <h4>01 扫码下单</h4>
-                    <div class="qr-placeholder">
-                        <img src="images/qrcode.jpg" alt="扫码下单" />
-                    </div>
-                    <p class="small-text">长按识别二维码，进入购买页面</p>
-                </div>
-                <div class="qr-option">
-                    <h4>02 添加客户经理</h4>
-                    <div class="qr-placeholder">
-                        <img src="https://via.placeholder.com/150x150/1a0033/ffffff?text=二维码" alt="添加经理" />
-                    </div>
-                    <p class="small-text">长按识别二维码，添加专属客服</p>
-                </div>
-            </div>
-
-            <div class="footer-contacts">
-                <div class="contact-item">
-                    <span>微信咨询</span>
-                    <a href="tel:185-0019-6371">185-0019-6371</a>
-                </div>
-                <div class="contact-item">
-                    <span>客服专线</span>
-                    <a href="tel:186-0046-6021">186-0046-6021</a>
-                </div>
-            </div>
-
-            <div class="note">
-                <p>本服务为非实物商品，一经支付不可退款。请确认好需求后再下单。</p>
+        <div class="sol-item" style="background: #161616; padding: 20px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: row; gap: 14px;">
+            <div class="num" style="width: 28px; height: 28px; border-radius: 6px; border: 1px solid rgba(232,68,42,0.35); color: rgba(232,68,42,0.7); font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;">5</div>
+            <div>
+                <h4 style="font-size: 15px; font-weight: 700; color: #F0F0F0; margin-bottom: 3px;">专业全程服务</h4>
+                <p style="font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5;">包安装、包配置、包服务，专业技术服务保障全程</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- 返回顶部按钮 -->
-    <button id="backToTop" class="back-to-top">顶部</button>
-</div>
+<!-- 4.4 服务承诺区 -->
+<section class="promise-section" style="background-color: #0A0A0A; padding: 56px 24px;">
+    <h2 style="font-size: 1.8rem; color: #E8442A; margin-bottom: 15px;">服务承诺</h2>
+    <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: #F0F0F0;">专业·专注·专属</h3>
+    <p style="opacity: 0.8; margin-bottom: 30px;">四项硬承诺，让你用得放心</p>
+    <div class="promise-items" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+        <div class="promise-item" style="background: #161616; padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">
+            <div class="icon" style="font-size: 2.5rem; margin-bottom: 15px; color: #E8442A;">⚡</div>
+            <h4 style="margin-bottom: 10px; color: #F0F0F0;">专业部署</h4>
+            <p style="opacity: 0.8; font-size: 0.95rem; color: #F0F0F0;">技术团队1V1安装配置，24小时内完成部署上线</p>
+        </div>
+        <div class="promise-item" style="background: #161616; padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">
+            <div class="icon" style="font-size: 2.5rem; margin-bottom: 15px; color: #E8442A;">🎯</div>
+            <h4 style="margin-bottom: 10px; color: #F0F0F0;">专业服务</h4>
+            <p style="opacity: 0.8; font-size: 0.95rem; color: #F0F0F0;">为你定制培训龙虾技能，满足你的工作需求，让龙虾真工作</p>
+        </div>
+        <div class="promise-item" style="background: #161616; padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">
+            <div class="icon" style="font-size: 2.5rem; margin-bottom: 15px; color: #E8442A;">🛡️</div>
+            <h4 style="margin-bottom: 10px; color: #F0F0F0;">专业售后</h4>
+            <p style="opacity: 0.8; font-size: 0.95rem; color: #F0F0F0;">免费版本升级、技能扩展、问题排查，专业贴心</p>
+        </div>
+        <div class="promise-item" style="background: #161616; padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">
+            <div class="icon" style="font-size: 2.5rem; margin-bottom: 15px; color: #E8442A;">💰</div>
+            <h4 style="margin-bottom: 10px; color: #F0F0F0;">专属服务包</h4>
+            <p style="opacity: 0.8; font-size: 0.95rem; color: #F0F0F0;">价格远低于同行，性能有保障，成本更低更实惠</p>
+        </div>
+    </div>
+</section>
 
-<script>
-    const backToTopBtn = document.getElementById('backToTop');
-    if (backToTopBtn) {
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+<!-- 4.5 价格方案区 -->
+<section class="pricing" style="background-color: #141414; padding: 56px 24px;">
+    <h2 style="font-size: 1.8rem; color: #E8442A; margin-bottom: 15px;">价格方案</h2>
+    <div class="price-tabs" style="display: flex; gap: 10px; justify-content: center; margin-bottom: 30px;">
+        <span class="tab active" style="padding: 10px 20px; background: #E8442A; color: white; border-radius: 20px; cursor: pointer; transition: all 0.3s; font-size: 0.9rem; font-weight: 600;">按月付费</span>
+        <span class="tab" style="padding: 10px 20px; background: #161616; color: rgba(255,255,255,0.6); border-radius: 20px; cursor: pointer; transition: all 0.3s; font-size: 0.9rem; font-weight: 600;">VIP用户专享</span>
+        <span class="tab" style="padding: 10px 20px; background: #161616; color: rgba(255,255,255,0.6); border-radius: 20px; cursor: pointer; transition: all 0.3s; font-size: 0.9rem; font-weight: 600;">无隐形消费</span>
+    </div>
 
-        window.addEventListener('scroll', () => {
-            backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
-        });
-    }
-</script>
+    <!-- 基础套餐 -->
+    <div class="plan-card basic" style="background: #161616; padding: 30px; border-radius: 20px; margin-bottom: 30px; border: 2px solid rgba(255,255,255,0.08);">
+        <h3 style="font-size: 1.5rem; margin-bottom: 10px; color: #F0F0F0;">基础套餐</h3>
+        <p style="opacity: 0.8; margin-bottom: 20px; color: #F0F0F0;">适合：刚接触AI，想让AI完成简单工作任务的用户</p>
+        <div class="price" style="font-size: 2rem; margin-bottom: 15px;">
+            <span class="amount" style="color: #E8442A; font-weight: bold;">¥39</span><span class="original" style="color: rgba(255,255,255,0.5); font-size: 1rem; margin-left: 5px; text-decoration: line-through;">/月 原价¥99</span>
+        </div>
+        <div class="discount" style="background: #E8442A; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; margin-bottom: 20px;">限时优惠</div>
+        <div class="details">
+            <p><strong>对话额度</strong></p>
+            <p>约每天 10-15 次日常对话</p>
+            <ul style="list-style: none; margin-top: 15px;">
+                <li style="margin-bottom: 8px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #2ECC71; margin-right: 10px;"></i> 专属技术经理部署调试</li>
+                <li style="margin-bottom: 8px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #2ECC71; margin-right: 10px;"></i> 记忆优化配置</li>
+                <li style="margin-bottom: 8px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #2ECC71; margin-right: 10px;"></i> 1-2个专属功能定制开发</li>
+                <li style="margin-bottom: 8px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #2ECC71; margin-right: 10px;"></i> 20元大模型 token 包</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 进阶套餐 -->
+    <div class="plan-card advanced" style="background: #161616; padding: 30px; border-radius: 20px; margin-bottom: 30px; border: 2px solid #E8442A;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 10px; color: #F0F0F0;">进阶套餐</h3>
+        <p style="opacity: 0.8; margin-bottom: 20px; color: #F0F0F0;">适合：想要深度使用，把"龙虾"当一个员工的用户</p>
+        <div class="price" style="font-size: 2rem; margin-bottom: 15px;">
+            <span class="amount" style="color: #E8442A; font-weight: bold;">¥129</span><span class="original" style="color: rgba(255,255,255,0.5); font-size: 1rem; margin-left: 5px; text-decoration: line-through;">/月 原价¥299</span>
+        </div>
+        <div class="discount" style="background: #E8442A; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; margin-bottom: 20px;">限时优惠</div>
+        <div class="details">
+            <p><strong>对话额度</strong></p>
+            <p>约每天 30-50 次中等强度对话</p>
+            <ul style="list-style: none; margin-top: 15px;">
+                <li style="margin-bottom: 8px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #2ECC71; margin-right: 10px;"></i> 体验全部服务</li>
+                <li style="margin-bottom: 8px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #2ECC71; margin-right: 10px;"></i> 进阶安全支持</li>
+                <li style="margin-bottom: 8px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #2ECC71; margin-right: 10px;"></i> 59元大模型 token 包（性价比最优）</li>
+            </ul>
+        </div>
+        <div class="badge" style="position: absolute; top: 10px; right: 10px; background: #E8442A; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; font-weight: 600;">性价比最优</div>
+    </div>
+
+    <!-- Max套餐 -->
+    <div class="plan-card max" style="background: #161616; padding: 30px; border-radius: 20px; margin-bottom: 30px; border: 2px solid rgba(255,255,255,0.08);">
+        <h3 style="font-size: 1.5rem; margin-bottom: 10px; color: #F0F0F0;">Max 套餐</h3>
+        <p style="opacity: 0.8; margin-bottom: 20px; color: #F0F0F0;">适合：团队/公司、多产品、需要建立"AI员工团队"的用户</p>
+        <div class="price" style="font-size: 2rem; margin-bottom: 15px;">
+            <span class="amount" style="color: #E8442A; font-weight: bold;">¥299</span><span class="original" style="color: rgba(255,255,255,0.5); font-size: 1rem; margin-left: 5px; text-decoration: line-through;">/月 原价¥699</span>
+        </div>
+        <div class="discount" style="background: #E8442A; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; margin-bottom: 20px;">限时优惠</div>
+        <div class="details">
+            <p><strong>对话额度</strong></p>
+            <p>约每天 60-100 次高强度对话</p>
+            <ul style="list-style: none; margin-top: 15px;">
+                <li style="margin-bottom: 8px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #2ECC71; margin-right: 10px;"></i> 体验全部服务</li>
+                <li style="margin-bottom: 8px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #2ECC71; margin-right: 10px;"></i> 进阶安全支持</li>
+                <li style="margin-bottom: 8px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #2ECC71; margin-right: 10px;"></i> 进阶知识库方案</li>
+                <li style="margin-bottom: 8px; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #2ECC71; margin-right: 10px;"></i> 99元大模型 token 包（大额度无限用）</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- 4.6 购买流程区 -->
+<section class="how-to-start" style="background-color: #1E1E1E; padding: 56px 24px;">
+    <h2 style="font-size: 1.8rem; color: #E8442A; margin-bottom: 15px;">如何开始</h2>
+    <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: #F0F0F0;">三步开始<br />你的AI助理</h3>
+    <p style="opacity: 0.8; margin-bottom: 30px; color: #F0F0F0;">简单、快速、有人全程陪跑</p>
+    <div class="steps" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        <div class="step" style="background: #161616; padding: 20px; border-radius: 16px;">
+            <div class="step-num" style="width: 40px; height: 40px; background: #E8442A; color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.2rem; font-weight: bold; margin-bottom: 15px;">01</div>
+            <h4 style="margin-bottom: 10px; color: #F0F0F0;">扫码下单</h4>
+            <p style="opacity: 0.8; font-size: 0.95rem; color: #F0F0F0;">扫码选择套餐并完成支付，整个过程不超过2分钟</p>
+        </div>
+        <div class="step" style="background: #161616; padding: 20px; border-radius: 16px;">
+            <div class="step-num" style="width: 40px; height: 40px; background: #E8442A; color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.2rem; font-weight: bold; margin-bottom: 15px;">02</div>
+            <h4 style="margin-bottom: 10px; color: #F0F0F0;">添加专属客户经理</h4>
+            <p style="opacity: 0.8; font-size: 0.95rem; color: #F0F0F0;">支付完成后扫码添加专属客户经理，开始享受1V1专属服务</p>
+        </div>
+        <div class="step" style="background: #161616; padding: 20px; border-radius: 16px;">
+            <div class="step-num" style="width: 40px; height: 40px; background: #E8442A; color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.2rem; font-weight: bold; margin-bottom: 15px;">03</div>
+            <h4 style="margin-bottom: 10px; color: #F0F0F0;">部署使用</h4>
+            <p style="opacity: 0.8; font-size: 0.95rem; color: #F0F0F0;">专属客户经理提供1V1部署配置服务，24小时内上线可用</p>
+        </div>
+    </div>
+</section>
+
+<!-- 4.7 尾页 QR 区 -->
+<section class="start-now" style="background-color: #0A0A0A; padding: 56px 24px;">
+    <h2 style="font-size: 1.8rem; color: #E8442A; margin-bottom: 15px;">立即开始</h2>
+    <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: #F0F0F0;">扫码下单<br />今天就把您的AI员工领回家</h3>
+    <p style="opacity: 0.8; margin-bottom: 30px; color: #F0F0F0;">付款后24小时内完成部署，专属客户经理全程跟进</p>
+    <div class="qrcode-container" style="display: flex; justify-content: center; gap: 40px; margin-bottom: 30px;">
+        <div class="qrcode-item" style="text-align: center;">
+            <img src="./images/1.jpg" alt="扫码下单" style="width: 150px; height: 150px; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px;" />
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8; color: #F0F0F0;">长按识别 · 选择套餐完成支付</p>
+        </div>
+        <div class="qrcode-item" style="text-align: center;">
+            <img src="./images/2.jpg" alt="添加客户经理" style="width: 150px; height: 150px; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px;" />
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8; color: #F0F0F0;">长按识别 · 享受1V1专属服务</p>
+        </div>
+    </div>
+
+    <!-- 新增：大卡片内含两个小卡片 -->
+    <div class="contact-wrapper" style="background: #161616; padding: 20px; border-radius: 12px; margin-bottom: 20px;">
+        <div class="contact-header" style="text-align: center; font-size: 0.9rem; opacity: 0.8; color: #F0F0F0; margin-bottom: 15px;">微信添加异常？致电客户经理</div>
+        <div class="contact-grid" style="display: flex; gap: 20px; justify-content: center;">
+            <div class="contact-card" style="flex: 1; text-align: center; padding: 15px; background: #161616; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                <div style="font-size: 1.1rem; color: #F0F0F0; margin-bottom: 5px;">185-0019-6371</div>
+                <div style="font-size: 0.8rem; opacity: 0.8; color: #F0F0F0;">点击号码可直接拨打</div>
+            </div>
+            <div class="contact-card" style="flex: 1; text-align: center; padding: 15px; background: #161616; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                <div style="font-size: 1.1rem; color: #F0F0F0; margin-bottom: 5px;">186-0046-6021</div>
+                <div style="font-size: 0.8rem; opacity: 0.8; color: #F0F0F0;">点击号码可直接拨打</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" style="background-color: #0A0A0A; padding: 40px 24px; text-align: center; color: #F0F0F0;">
+    <div class="footer-content">
+        <div class="brand" style="font-size: 1.5rem; color: #E8442A; margin-bottom: 10px; font-weight: 900;">世企通</div>
+        <p style="opacity: 0.8; font-size: 0.9rem; margin: 5px 0;">让每个人都能拥有真正有用的 AI 助理 / © 2025 世企通 · 所有权利保留</p>
+    </div>
+</footer>
+
 </body>
 </html>
