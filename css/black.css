@@ -626,6 +626,38 @@ body {
     color: #F0F0F0;
 }
 
+.q-item.no-number {
+    padding-left: 20px; /* 原来是 60px，现在左移 */
+}
+
+/* 价格方案中的功能项对勾 */
+.pricing .details li::before {
+    content: "✔";
+    color: #2ECC71;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* 痛点区大括号装饰 */
+.q-item::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    background: linear-gradient(to bottom, #E8442A, #E8442A);
+    border-radius: 8px 0 0 8px;
+    z-index: 1;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.3), 0 0 8px rgba(0,0,0,0.2);
+}
+
+/* 顶部圆角更明显 */
+.q-item::before {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
 /* 响应式 */
 @media (max-width: 768px) {
     .hero, .pain-points, .service-content, .promise-section, .pricing, .how-to-start, .start-now, .footer {
